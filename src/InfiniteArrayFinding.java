@@ -2,7 +2,7 @@
 public class InfiniteArrayFinding {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-        int ans = findPositionInInfiniteArr(arr, 5);
+        int ans = findPositionInInfiniteArr(arr, 2);
         System.out.println(ans);
     }
 
@@ -13,10 +13,14 @@ public class InfiniteArrayFinding {
         int ans = -1;
         ans = check(start, end, target, arr);
         // infinite array looping approach... without using arr.length
-        while (ans == -1){
+        try {
+            while (ans == -1){
                 start = end + 1;
                 end = end * 2;
                 ans = check(start, end, target, arr);
+            }
+        } catch (Exception e) {
+            return -1;
         }
         return ans;
     }
