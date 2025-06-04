@@ -1,7 +1,7 @@
 public class CeilingNo {
     public static void main(String[] args) {
-        int[] arr = {2,3,5,6,9,11,14,17,19};
-        int target = 10;
+        int[] arr = {2,3,5,6,9,11,14,16,17,18,19};
+        int target = 15;
         // Ceiling of the number the smallest element which is greater than or equal to given target...
        int ceilingNo =  findCeilingNo(arr, target);
         System.out.println("Ceiling of the number "+ target + "is: "+ ceilingNo);
